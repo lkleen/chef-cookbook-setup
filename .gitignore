@@ -1,0 +1,19 @@
+cookbooks
+!site-cookbooks/.donotdelete
+site-cookbooks
+dev-cookbooks
+/tmp
+/*/tmp
+.DS_Store
+/Vagrantfile
+.vagrant
+*~
+.idea
+*.lock
+.log
+target
+
+# Bundler
+/.bundle/
+/bin/
+/vendor/gems/
