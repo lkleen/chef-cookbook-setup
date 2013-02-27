@@ -16,6 +16,8 @@ mysql_database_user node['setup']['database']['user'] do
   password node['setup']['database']['pass']
   database_name node['setup']['database']['name']
   host '%'
+  privileges [:all]
+  action :create
   action :grant
 end
 
