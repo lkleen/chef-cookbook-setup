@@ -1,4 +1,13 @@
 include_recipe "database::mysql"
+include_recipe "iptables"
+
+iptables_rule "port_mysql" do
+  cookbook "mysql"
+end
+
+iptables_rule "port_ssh" do
+  cookbook "openssh"
+end
 
 mysql_connection_info = {
     :host => "localhost",
