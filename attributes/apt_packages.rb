@@ -1,0 +1,1 @@
+default['setup']['packages'] = %w(vim less htop)

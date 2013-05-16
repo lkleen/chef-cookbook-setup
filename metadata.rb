@@ -6,10 +6,11 @@ description      'Installs/Configures setup'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.3'
 
-recipe "database", "Empty placeholder"
-recipe "database::master", "Creates application specific user and database"
+recipe "setup::database", "setup databases"
+recipe "setup::apt_packages", "installs apt packages"
 
 depends "mysql", ">= 1.3.0"
+depends "apt", ">= 1.9.0"
 
 %w{ debian ubuntu centos suse fedora redhat scientific amazon }.each do |os|
   supports os
