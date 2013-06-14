@@ -9,6 +9,7 @@ version          '0.1.3'
 recipe "setup::database", "setup databases"
 recipe "setup::apt_packages", "installs apt packages"
 
+depends "database", ">= 1.3.12"
 depends "mysql", ">= 1.3.0"
 depends "apt", ">= 1.9.0"
 
